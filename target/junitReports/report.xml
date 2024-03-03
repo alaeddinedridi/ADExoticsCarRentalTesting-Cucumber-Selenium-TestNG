@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="131.347" tests="4" skipped="0" failures="1" errors="0">
+<testcase classname="Login feature" name="Submit login form with empty fields" time="51.277">
+<system-out><![CDATA[
+Given user is on home page..................................................passed
+Given user is on login page.................................................passed
+When user leaves empty fields...............................................passed
+And clicks on login.........................................................passed
+Then an error is displayed to the user......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login feature" name="Check login is failed with invalid credentials - Example #1.1" time="43.159">
+<failure type="org.openqa.selenium.TimeoutException" message="Expected condition failed: waiting for visibility of element located by By.className: fielderror (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-91-generic', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.159, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37483}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:37483/devtoo..., se:cdpVersion: 119.0.6045.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 372f305b6d3d4e64181e20ffe11635a5">
+<![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.className: fielderror (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-91-generic', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.159, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37483}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:37483/devtoo..., se:cdpVersion: 119.0.6045.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 372f305b6d3d4e64181e20ffe11635a5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utils.BasePage.availableElement(BasePage.java:30)
+	at pages.LoginPage.checkFieldErrorMessage(LoginPage.java:43)
+	at stepDefinitions.LoginSteps.an_error_is_displayed_to_the_user(LoginSteps.java:58)
+	at ✽.an error is displayed to the user(file:///home/ala/eclipse-workspace/ADExoticsCarRentalTesting-Cucumber-Selenium/src/test/resources/features/login.feature:22)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user is on home page..................................................passed
+Given user is on login page.................................................passed
+When user enters an invalid "test@test.com" and "test"......................passed
+And clicks on login.........................................................passed
+Then an error is displayed to the user......................................failed
+]]></system-out>
+</testcase>
+<testcase classname="Login feature" name="Check login is successful with valid credentials - Example #1.1" time="18.407">
+<system-out><![CDATA[
+Given user is on home page..................................................passed
+Given user is on login page.................................................passed
+When user enters his "admin@gmail.com" and "admin"..........................passed
+And clicks on login.........................................................passed
+Then user is navigated to his profile.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login feature" name="Check login is successful with valid credentials - Example #1.2" time="17.856">
+<system-out><![CDATA[
+Given user is on home page..................................................passed
+Given user is on login page.................................................passed
+When user enters his "ala@gmail.com" and "test1234".........................passed
+And clicks on login.........................................................passed
+Then user is navigated to his profile.......................................passed
+]]></system-out>
+</testcase>
+</testsuite>
