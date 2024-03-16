@@ -3,23 +3,40 @@ Feature: Login feature
  	Background:
  		Given user is on home page
  		
- 	
- 	Scenario: Submit login form with empty fields 
+
+ 	#Scenario: Submit login form with empty fields 
+  	#Given user is on login page
+		#When user leaves empty fields
+		#| email | password |
+		#|  |  |
+		#| admin@gmail.com |  |
+		#|  | admin |
+		#And clicks on login
+		#Then an error is displayed to the user
+		
+	Scenario Outline: Submit login form with empty fields 
   	Given user is on login page
-		When user leaves empty fields
+		When user leaves empty fields for "<email>" or "<password>"
+		And clicks on login
+		Then an error is displayed to the user
+	
+	Examples: 
+	
 		| email | password |
 		|  |  |
 		| admin@gmail.com |  |
 		|  | admin |
-		And clicks on login
-		Then an error is displayed to the user
-		
-		
+	
+	
+	
+	
+	
+	
 		Scenario Outline: Check login is failed with invalid credentials
   	Given user is on login page
 		When user enters an invalid "<email>" and "<password>"
 		And clicks on login
-		Then an error is displayed to the user
+		Then an authentication error is displayed to the user
 		
 		
 
@@ -35,7 +52,7 @@ Feature: Login feature
   	Given user is on login page
 		When user enters his "<email>" and "<password>"
 		And clicks on login
-		Then user is navigated to his profile
+		Then user is navigated to cars collection
 		
 		
 

@@ -33,11 +33,18 @@ public class BackgroundSteps extends BaseTests{
 	@And("clicks on login")
 	public void clicks_on_login() {
 //		dashboard= loginPage.clickLoginButton();
-		loginPage.clickLoginButton();
+		try {
+			loginPage.clickLoginButton();
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
-	@Then("user is navigated to his profile")
-	public void user_is_navigated_to_his_profile() {
-//		Assert.assertTrue("Seems like you are not logged in", dashboard.getContactsCardHeader());
+	@Then("user is navigated to cars collection")
+	public void user_is_navigated_to_cars_collection() {
+		Assert.assertTrue("Seems like you are not logged in",loginPage.isLoggedIn());
+		System.out.println("user is navigator tooooooooooooooooooooooooooooooooooo");
 	}
 }

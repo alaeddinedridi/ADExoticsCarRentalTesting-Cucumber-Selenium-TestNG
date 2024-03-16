@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-03T21:25:00 CET" name="Default suite" finished-at="2024-03-03T21:27:13 CET" duration-ms="132717">
+  <suite started-at="2024-03-16T21:59:24 CET" name="Default suite" finished-at="2024-03-16T22:00:45 CET" duration-ms="80693">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@53fd0d10]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2250b9f2]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-03-03T21:25:00 CET" name="Default test" finished-at="2024-03-03T21:27:13 CET" duration-ms="132717">
+    <test started-at="2024-03-16T21:59:24 CET" name="Default test" finished-at="2024-03-16T22:00:45 CET" duration-ms="80693">
       <class name="runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@53fd0d10]" started-at="2024-03-03T21:25:00 CET" name="setUpClass" finished-at="2024-03-03T21:25:02 CET" duration-ms="1496" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T21:59:24 CET" name="setUpClass" finished-at="2024-03-16T21:59:25 CET" duration-ms="1057" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@52b30054]]>
+                <![CDATA[org.testng.TestRunner@995ad50]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@53fd0d10]" started-at="2024-03-03T21:25:02 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-03T21:25:53 CET" duration-ms="51452" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T21:59:25 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-16T21:59:41 CET" duration-ms="15206" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@53fd0d10]" started-at="2024-03-03T21:25:53 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-03T21:26:37 CET" duration-ms="43186" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T21:59:41 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-16T21:59:54 CET" duration-ms="12940" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Submit login form with empty fields"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login feature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T21:59:54 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-16T22:00:07 CET" duration-ms="12915" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Submit login form with empty fields"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login feature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T22:00:07 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-16T22:00:20 CET" duration-ms="13042" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -50,35 +82,22 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
+          <exception class="org.junit.ComparisonFailure">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.className: fielderror (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.10.0', revision: 'c14d967899'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-91-generic', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.159, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37483}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:37483/devtoo..., se:cdpVersion: 119.0.6045.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 372f305b6d3d4e64181e20ffe11635a5]]>
+              <![CDATA[Incorrect email and/or password expected:<[]Incorrect email and/...> but was:<[Authentication error was expected to be: 'Incorrect email and/or password' but found: ]Incorrect email and/...>]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.className: fielderror (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.10.0', revision: 'c14d967899'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-91-generic', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.159, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37483}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:37483/devtoo..., se:cdpVersion: 119.0.6045.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 372f305b6d3d4e64181e20ffe11635a5
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-at utils.BasePage.availableElement(BasePage.java:30)
-at pages.LoginPage.checkFieldErrorMessage(LoginPage.java:43)
-at stepDefinitions.LoginSteps.an_error_is_displayed_to_the_user(LoginSteps.java:58)
-at ✽.an error is displayed to the user(file:///home/ala/eclipse-workspace/ADExoticsCarRentalTesting-Cucumber-Selenium/src/test/resources/features/login.feature:22)
+              <![CDATA[org.junit.ComparisonFailure: Incorrect email and/or password expected:<[]Incorrect email and/...> but was:<[Authentication error was expected to be: 'Incorrect email and/or password' but found: ]Incorrect email and/...>
+at org.junit.Assert.assertEquals(Assert.java:117)
+at stepDefinitions.LoginSteps.an_authentication_error_is_displayed_to_the_user(LoginSteps.java:77)
+at ✽.an authentication error is displayed to the user(file:///home/ala/eclipse-workspace/ADExoticsCarRentalTesting-Cucumber-Selenium/src/test/resources/features/login.feature:39)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.junit.ComparisonFailure -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@53fd0d10]" started-at="2024-03-03T21:26:37 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-03T21:26:55 CET" duration-ms="18430" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T22:00:20 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-16T22:00:32 CET" duration-ms="12709" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -94,7 +113,7 @@ at ✽.an error is displayed to the user(file:///home/ala/eclipse-workspace/ADEx
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@53fd0d10]" started-at="2024-03-03T21:26:55 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-03T21:27:13 CET" duration-ms="17871" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T22:00:32 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-16T22:00:45 CET" duration-ms="12608" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -110,7 +129,7 @@ at ✽.an error is displayed to the user(file:///home/ala/eclipse-workspace/ADEx
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@53fd0d10]" started-at="2024-03-03T21:27:13 CET" name="tearDownClass" finished-at="2024-03-03T21:27:13 CET" duration-ms="132" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T22:00:45 CET" name="tearDownClass" finished-at="2024-03-16T22:00:45 CET" duration-ms="104" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -115,6 +115,16 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Submit login form with empty fields&quot;, &quot;Login feature&quot;)">runScenario("Submit login form with empty fields", "Login feature")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Submit login form with empty fields&quot;, &quot;Login feature&quot;)">runScenario("Submit login form with empty fields", "Login feature")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Submit login form with empty fields&quot;, &quot;Login feature&quot;)">runScenario("Submit login form with empty fields", "Login feature")</a> <!-- method navigator-link -->
@@ -154,18 +164,10 @@
                   </a> <!-- runScenario("Check login is failed with invalid credentials", "Login feature") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Check login is failed with invalid credentials","Login feature")</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.className: fielderror (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-91-generic&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.159, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37483}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:37483/devtoo..., se:cdpVersion: 119.0.6045.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 372f305b6d3d4e64181e20ffe11635a5
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at utils.BasePage.availableElement(BasePage.java:30)
-	at pages.LoginPage.checkFieldErrorMessage(LoginPage.java:43)
-	at stepDefinitions.LoginSteps.an_error_is_displayed_to_the_user(LoginSteps.java:58)
-	at ✽.an error is displayed to the user(file:///home/ala/eclipse-workspace/ADExoticsCarRentalTesting-Cucumber-Selenium/src/test/resources/features/login.feature:22)
+                  <div class="stack-trace">org.junit.ComparisonFailure: Incorrect email and/or password expected:&lt;[]Incorrect email and/...&gt; but was:&lt;[Authentication error was expected to be: &apos;Incorrect email and/or password&apos; but found: ]Incorrect email and/...&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at stepDefinitions.LoginSteps.an_authentication_error_is_displayed_to_the_user(LoginSteps.java:77)
+	at ✽.an authentication error is displayed to the user(file:///home/ala/eclipse-workspace/ADExoticsCarRentalTesting-Cucumber-Selenium/src/test/resources/features/login.feature:39)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -180,6 +182,26 @@ Session ID: 372f305b6d3d4e64181e20ffe11635a5
               <span class="class-name">runners.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Submit login form with empty fields&quot;, &quot;Login feature&quot;)">
+                  </a> <!-- runScenario("Submit login form with empty fields", "Login feature") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Submit login form with empty fields","Login feature")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Submit login form with empty fields&quot;, &quot;Login feature&quot;)">
+                  </a> <!-- runScenario("Submit login form with empty fields", "Login feature") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Submit login form with empty fields","Login feature")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;Submit login form with empty fields&quot;, &quot;Login feature&quot;)">
@@ -215,7 +237,7 @@ Session ID: 372f305b6d3d4e64181e20ffe11635a5
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse-647590991/testng-customsuite.xml</span>
+            <span class="header-content">/tmp/testng-eclipse--129425733/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -224,7 +246,18 @@ Session ID: 372f305b6d3d4e64181e20ffe11635a5
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;transformers.LoginTransformer&quot;/&gt;
+      &lt;class name=&quot;base.BaseTests&quot;/&gt;
+      &lt;class name=&quot;hooks.Hooks&quot;/&gt;
+      &lt;class name=&quot;stepDefinitions.BackgroundSteps&quot;/&gt;
+      &lt;class name=&quot;pages.CollectionPage&quot;/&gt;
+      &lt;class name=&quot;stepDefinitions.LoginSteps&quot;/&gt;
+      &lt;class name=&quot;pages.LoginPage&quot;/&gt;
+      &lt;class name=&quot;factory.DriverFactory&quot;/&gt;
+      &lt;class name=&quot;utils.BasePage&quot;/&gt;
+      &lt;class name=&quot;utils.ConfigReader&quot;/&gt;
       &lt;class name=&quot;runners.TestRunner&quot;/&gt;
+      &lt;class name=&quot;models.Login&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -238,7 +271,7 @@ Session ID: 372f305b6d3d4e64181e20ffe11635a5
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Default test (12 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -272,28 +305,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runners.TestRunner')
-data.setCell(0, 3, 51452);
+data.setCell(0, 3, 15206);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'runners.TestRunner')
-data.setCell(1, 3, 43186);
+data.setCell(1, 3, 13042);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'runners.TestRunner')
-data.setCell(2, 3, 18430);
+data.setCell(2, 3, 12940);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'runners.TestRunner')
-data.setCell(3, 3, 17871);
+data.setCell(3, 3, 12915);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'runners.TestRunner')
+data.setCell(4, 3, 12709);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'runners.TestRunner')
+data.setCell(5, 3, 12608);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -321,30 +362,38 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runners.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@52b30054)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@995ad50)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Submit login form with empty fields", "Login feature")</span>
-                <span class="method-start">1536 ms</span>
+                <span class="method-start">1099 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Submit login form with empty fields", "Login feature")</span>
+                <span class="method-start">16313 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Submit login form with empty fields", "Login feature")</span>
+                <span class="method-start">29255 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Check login is failed with invalid credentials", "Login feature")</span>
-                <span class="method-start">52993 ms</span>
+                <span class="method-start">42172 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Check login is successful with valid credentials", "Login feature")</span>
-                <span class="method-start">96187 ms</span>
+                <span class="method-start">55218 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Check login is successful with valid credentials", "Login feature")</span>
-                <span class="method-start">114619 ms</span>
+                <span class="method-start">67929 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">132495 ms</span>
+                <span class="method-start">80547 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -18,29 +18,49 @@ public class LoginSteps extends BaseTests {
 	private LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
 	
 	
-	@When("^user leaves empty fields$")
-	public void user_leaves_empty_fields(DataTable dataTable) {
-		List<Login> logins= new ArrayList<Login>();
+	@When("^user leaves empty fields for \"(.*)\" or \"(.*)\"$")
+	public void user_leaves_empty_fields_for_email_or_password(String email,String password) {
 		
-		logins=dataTable.asList(Login.class);
-		
-		for (Login login:logins) {
-			System.out.println("Email is :"+login.getEmail());
-			System.out.println("Password is:"+login.getPassword());
-			if (login.getEmail()!=null) {
-				loginPage.setEmail(login.getEmail());
+			System.out.println("Email is :"+email);
+			System.out.println("Password is:"+password);
+			
+			if (email!=null) {
+				loginPage.setEmail(email);
 			}else {
-				loginPage.setEmptyEmail();
+				loginPage.setEmail("");
 			}
 			
-			if (login.getPassword()!=null) {
-				loginPage.setPassword(login.getPassword());
+			if (password!=null) {
+				loginPage.setPassword(password);
 			}else {
-				loginPage.setEmptyPassword();
+				loginPage.setPassword("");
 			}
-		}
+		
 		
 	}
+//	@When("^user leaves empty fields$")
+//	public void user_leaves_empty_fields(DataTable dataTable) {
+//		List<Login> logins= new ArrayList<Login>();
+//		
+//		logins=dataTable.asList(Login.class);
+//		
+//		for (Login login:logins) {
+//			System.out.println("Email is :"+login.getEmail());
+//			System.out.println("Password is:"+login.getPassword());
+//			if (login.getEmail()!=null) {
+//				loginPage.setEmail(login.getEmail());
+//			}else {
+//				loginPage.setEmptyEmail();
+//			}
+//			
+//			if (login.getPassword()!=null) {
+//				loginPage.setPassword(login.getPassword());
+//			}else {
+//				loginPage.setEmptyPassword();
+//			}
+//		}
+//		
+//	}
 	
 	
 	
@@ -52,10 +72,14 @@ public class LoginSteps extends BaseTests {
 	    loginPage.setPassword(password);
 	}
 
+	@Then("an authentication error is displayed to the user")
+	public void an_authentication_error_is_displayed_to_the_user() {
+		Assert.assertEquals("Incorrect email and/or password",loginPage.CheckLoginErrorMessage());
+	}
 	
 	@Then("an error is displayed to the user")
 	public void an_error_is_displayed_to_the_user() {
 		Assert.assertTrue(loginPage.checkFieldErrorMessage());
-		Assert.assertTrue(loginPage.CheckLoginErrorMessage());
+		//Assert.assertTrue(loginPage.CheckLoginErrorMessage());
 	}
 }
