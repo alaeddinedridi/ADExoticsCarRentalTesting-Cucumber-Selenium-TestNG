@@ -1,7 +1,6 @@
 package pages;
 
 import java.io.File;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,10 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.LocalFileDetector;
-import org.openqa.selenium.remote.RemoteWebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utils.BasePage;
 
@@ -25,8 +20,17 @@ public class PostCarPage extends BasePage{
 	private By modelYearField = By.id("modelyear");
 	private By priceField = By.id("price");
 	private By descriptionField = By.id("description");
-	private By uploadFileElement = By.cssSelector("input[type=file]"); 
+	private By uploadFileElement = By.xpath("//input[@id='images']"); 
 	private By uploadBtn = By.className("upload-btn");
+	private By uploadMessageModal = By.xpath("//div[contains(@class,'body message')]");
+	private By modalExitBtn = By.id("exit");
+	private By carPictureTwo = By.id("picture_2");
+	private By carPictureOne = By.id("picture_1");
+	private By carMainPicture = By.xpath("//div[@class='main-picture']/img");
+	private By dashboardLink = By.xpath("//nav/div[1]");
+	private By carsTag = By.tagName("app-car");
+	private By carThumbnail = By.id("thumbnail");
+	
 	
 	String picturesPath="src/test/resources/data/pictures/";
 	List<String> listOfPictures = List.of(picturesPath+"under green urus 1.png \n ",
@@ -46,7 +50,7 @@ public class PostCarPage extends BasePage{
 	}
 	
 	public boolean isOnUploadPage() {
-		WebElement elm=availableElement(driver,uploadFileElement);
+		WebElement elm=availableElement(driver,uploadBtn);
 		if (elm.isDisplayed()) {
 			return true;
 		}
@@ -55,8 +59,9 @@ public class PostCarPage extends BasePage{
 	
 	public void pickPictures() {
 		
-		WebElement uploadElement = driver.findElement(By.xpath("//input[@id='btn_myFileInput']"));
+		WebElement uploadElement = driver.findElement(uploadFileElement);
 		((JavascriptExecutor)driver).executeScript("arguments[0].removeAttribute('style')", uploadElement);
+		System.out.println("this is the list of pictures:"+listOfPictures);
 		for (int i=0;i<listOfPictures.size();i++) {
 			String path =new File(listOfPictures.get(i)).getAbsolutePath();
 			picturesAbsolutePath.add(i, path);
@@ -70,8 +75,31 @@ public class PostCarPage extends BasePage{
 		
 	}
 	
-	public void uploadPictures() {
+	public String uploadPictures() {
 		clickElement(driver, uploadBtn, "normal");
+		String uploadMsg=availableElement(driver, uploadMessageModal).getText();
+		clickElement(driver, modalExitBtn, "normal");
+		return uploadMsg;
+	}
+	
+	public String checkUploadedCar() {
+		clickElement(driver, dashboardLink, "normal");
+		List<WebElement> cars = availableElements(driver, carsTag);
+		return cars.get(cars.size()-1).findElement(carThumbnail).getAttribute("src");
+	}
+	
+	public String chooseMainPicture() {
+	
+		String defaultMainPicture=availableElement(driver, carMainPicture).getAttribute("src");
+		clickElement(driver, carPictureOne, "normal");
+		String toBeMainPicture=availableElement(driver, carPictureTwo).getAttribute("src");
+		clickElement(driver, carPictureTwo, "normal");
+		String newMainPicture=availableElement(driver, carMainPicture).getAttribute("src");
+		if (toBeMainPicture.equals(newMainPicture) && !defaultMainPicture.equals(newMainPicture)) {
+			return newMainPicture;
+		}
+		
+		return null;
 	}
 	
 	public String getTitle() {

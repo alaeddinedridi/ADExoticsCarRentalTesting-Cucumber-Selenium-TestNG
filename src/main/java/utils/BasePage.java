@@ -1,6 +1,7 @@
 package utils;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -32,6 +33,13 @@ public class BasePage {
 		return elm;
     }
 
+	protected List<WebElement> availableElements(WebDriver driver,By locator){
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		List<WebElement> elms = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+
+		return elms;
+    }
+	
 	protected WebElement enterTextInElement(WebDriver driver,By locator, String value){
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		WebElement elm = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
