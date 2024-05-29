@@ -1,135 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-16T21:59:24 CET" name="Default suite" finished-at="2024-03-16T22:00:45 CET" duration-ms="80693">
+  <suite started-at="2024-05-29T11:13:50 CET" name="Default suite" finished-at="2024-05-29T11:14:19 CET" duration-ms="29137">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2250b9f2]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2f16c6b3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-03-16T21:59:24 CET" name="Default test" finished-at="2024-03-16T22:00:45 CET" duration-ms="80693">
+    <test started-at="2024-05-29T11:13:50 CET" name="Default test" finished-at="2024-05-29T11:14:19 CET" duration-ms="29137">
       <class name="runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T21:59:24 CET" name="setUpClass" finished-at="2024-03-16T21:59:25 CET" duration-ms="1057" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@2f16c6b3]" started-at="2024-05-29T11:13:50 CET" name="setUpClass" finished-at="2024-05-29T11:13:51 CET" duration-ms="1234" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@995ad50]]>
+                <![CDATA[org.testng.TestRunner@36ef1d65]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T21:59:25 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-16T21:59:41 CET" duration-ms="15206" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2f16c6b3]" started-at="2024-05-29T11:13:51 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-29T11:14:19 CET" duration-ms="27554" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Submit login form with empty fields"]]>
+                <![CDATA["Submit post car form successfully"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Login feature"]]>
+                <![CDATA["post a car"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T21:59:41 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-16T21:59:54 CET" duration-ms="12940" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Submit login form with empty fields"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login feature"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T21:59:54 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-16T22:00:07 CET" duration-ms="12915" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Submit login form with empty fields"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login feature"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T22:00:07 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-16T22:00:20 CET" duration-ms="13042" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check login is failed with invalid credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login feature"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.junit.ComparisonFailure">
-            <message>
-              <![CDATA[Incorrect email and/or password expected:<[]Incorrect email and/...> but was:<[Authentication error was expected to be: 'Incorrect email and/or password' but found: ]Incorrect email and/...>]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.junit.ComparisonFailure: Incorrect email and/or password expected:<[]Incorrect email and/...> but was:<[Authentication error was expected to be: 'Incorrect email and/or password' but found: ]Incorrect email and/...>
-at org.junit.Assert.assertEquals(Assert.java:117)
-at stepDefinitions.LoginSteps.an_authentication_error_is_displayed_to_the_user(LoginSteps.java:77)
-at ✽.an authentication error is displayed to the user(file:///home/ala/eclipse-workspace/ADExoticsCarRentalTesting-Cucumber-Selenium/src/test/resources/features/login.feature:39)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.junit.ComparisonFailure -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T22:00:20 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-16T22:00:32 CET" duration-ms="12709" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check login is successful with valid credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login feature"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T22:00:32 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-16T22:00:45 CET" duration-ms="12608" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check login is successful with valid credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login feature"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@2250b9f2]" started-at="2024-03-16T22:00:45 CET" name="tearDownClass" finished-at="2024-03-16T22:00:45 CET" duration-ms="104" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@2f16c6b3]" started-at="2024-05-29T11:14:19 CET" name="tearDownClass" finished-at="2024-05-29T11:14:19 CET" duration-ms="202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

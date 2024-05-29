@@ -1,64 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="79.747" tests="6" skipped="0" failures="1" errors="0">
-<testcase classname="Login feature" name="Submit login form with empty fields - Example #1.1" time="15.058">
+<testsuite name="Cucumber" time="27.866" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="post a car" name="Submit post car form successfully" time="27.398">
 <system-out><![CDATA[
-Given user is on home page..................................................passed
-Given user is on login page.................................................passed
-When user leaves empty fields for "" or ""..................................passed
-And clicks on login.........................................................passed
-Then an error is displayed to the user......................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Login feature" name="Submit login form with empty fields - Example #1.2" time="12.923">
-<system-out><![CDATA[
-Given user is on home page..................................................passed
-Given user is on login page.................................................passed
-When user leaves empty fields for "admin@gmail.com" or ""...................passed
-And clicks on login.........................................................passed
-Then an error is displayed to the user......................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Login feature" name="Submit login form with empty fields - Example #1.3" time="12.903">
-<system-out><![CDATA[
-Given user is on home page..................................................passed
-Given user is on login page.................................................passed
-When user leaves empty fields for "" or "admin".............................passed
-And clicks on login.........................................................passed
-Then an error is displayed to the user......................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Login feature" name="Check login is failed with invalid credentials - Example #1.1" time="13.032">
-<failure type="org.junit.ComparisonFailure" message="Incorrect email and/or password expected:&lt;[]Incorrect email and/...&gt; but was:&lt;[Authentication error was expected to be: 'Incorrect email and/or password' but found: ]Incorrect email and/...&gt;">
-<![CDATA[org.junit.ComparisonFailure: Incorrect email and/or password expected:<[]Incorrect email and/...> but was:<[Authentication error was expected to be: 'Incorrect email and/or password' but found: ]Incorrect email and/...>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at stepDefinitions.LoginSteps.an_authentication_error_is_displayed_to_the_user(LoginSteps.java:77)
-	at ✽.an authentication error is displayed to the user(file:///home/ala/eclipse-workspace/ADExoticsCarRentalTesting-Cucumber-Selenium/src/test/resources/features/login.feature:39)
-]]>
-</failure>
-<system-out><![CDATA[
-Given user is on home page..................................................passed
-Given user is on login page.................................................passed
-When user enters an invalid "test@test.com" and "test"......................passed
-And clicks on login.........................................................passed
-Then an authentication error is displayed to the user.......................failed
-]]></system-out>
-</testcase>
-<testcase classname="Login feature" name="Check login is successful with valid credentials - Example #1.1" time="12.696">
-<system-out><![CDATA[
-Given user is on home page..................................................passed
 Given user is on login page.................................................passed
 When user enters his "admin@gmail.com" and "admin"..........................passed
 And clicks on login.........................................................passed
-Then user is navigated to cars collection...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Login feature" name="Check login is successful with valid credentials - Example #1.2" time="12.6">
-<system-out><![CDATA[
-Given user is on home page..................................................passed
-Given user is on login page.................................................passed
-When user enters his "ala@gmail.com" and "test1234".........................passed
-And clicks on login.........................................................passed
-Then user is navigated to cars collection...................................passed
+Then user is navigated to admin dashboard...................................passed
+Given admin is on post car page.............................................passed
+When admin enters car informations..........................................passed
+And clicks on next..........................................................passed
+Then admin is navigated to the next page to pick car pictures...............passed
+And upload those car pictures...............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

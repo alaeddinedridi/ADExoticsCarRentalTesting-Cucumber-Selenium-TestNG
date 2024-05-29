@@ -7,12 +7,12 @@ import java.util.Properties;
 
 public class ConfigReader {
 	private Properties prop;
-	
-	
+
+
 	// Load the properties from config.properties
 	public Properties initProperties() {
 		prop= new Properties();
-		
+
 		try {
 			FileInputStream file = new FileInputStream("src/test/resources/config/config.properties");
 			prop.load(file);
@@ -23,7 +23,7 @@ public class ConfigReader {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return prop;
 	}
 }

@@ -24,28 +24,28 @@ public class BasePage {
 		}
         return elm;
     }
-	
+
 	protected WebElement availableElement(WebDriver driver,By locator){
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		WebElement elm = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		
+
 		return elm;
     }
-	
+
 	protected WebElement enterTextInElement(WebDriver driver,By locator, String value){
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		WebElement elm = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		elm.clear();
 		elm.sendKeys(value);
-	
+
 		return elm;
     }
-	
-	protected void selectElement(WebDriver driver,By locator, int option){
+
+	protected void selectElement(WebDriver driver,By locator, String option){
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 		WebElement selectElement = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		Select select = new Select(selectElement);
 		System.out.println("these are the items of the list : "+select.getOptions());
-		select.selectByIndex(option);
+		select.selectByValue(option);
 	}
 }

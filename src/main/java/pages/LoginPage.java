@@ -15,47 +15,47 @@ public class LoginPage extends BasePage {
     private By submitError = By.className("submiterror");
     private By fieldError = By.className("fielderror");
     private By navbarLoginBtn = By.xpath("//nav//button[contains(@class,'btn')]//span");
-    
+
 	public LoginPage(WebDriver driver) {
 		this.driver=driver;
 		System.out.println("inside login page");
 	}
-	
+
 	public String CheckLoginErrorMessage() {
-		
+
 		WebElement submitErrorElm = availableElement(driver, submitError);
 		System.out.println("this is the field elm: "+submitErrorElm+ " is it displayed ? "+submitErrorElm.isDisplayed());
 		if (submitErrorElm.isDisplayed()) {
 			return submitErrorElm.getText();
 		}
 		return "";
-		
+
 	}
-	
+
 	public boolean checkFieldErrorMessage() {
 		WebElement fieldErrorElm = availableElement(driver, fieldError);
 		System.out.println("this is the field elm: "+fieldErrorElm+ " is it displayed ? "+fieldErrorElm.isDisplayed());
 		return fieldErrorElm.isDisplayed();
 	}
-	
-	
-	public void setEmail(String email){ 
+
+
+	public void setEmail(String email){
 		 System.out.println("this is the pass : "+email);
-		 
+
 		 enterTextInElement(driver, emailField, email);
 		 System.out.println("after pass");
-		 
+
 	 }
-	
-	
-	 public void setPassword(String password){ 
+
+
+	 public void setPassword(String password){
 		 System.out.println("this is the pass : "+password);
-		 
+
 		 enterTextInElement(driver, passwordField, password);
 		 System.out.println("after pass");
-		 
+
 	 }
-	 
+
 	 public CollectionPage clickLoginButton(){
 		 try {
 			 Thread.sleep(5000);
@@ -67,7 +67,7 @@ public class LoginPage extends BasePage {
 		System.out.println("clicked!!!!!!!!!!!!!!!!!!!!!!!!!");
 		return new CollectionPage(driver);
 	 }
-	 
+
 	 public boolean isLoggedIn() {
 		 WebElement btn=availableElement(driver, navbarLoginBtn);
 		 System.out.println("this is getText ="+btn.getText());
@@ -75,5 +75,17 @@ public class LoginPage extends BasePage {
 			 return true;
 		 }
 		 return false;
+	 }
+
+	 public String getTitle() {
+		 try {
+			 Thread.sleep(2000);
+		 } catch (InterruptedException e) {
+			 // TODO Auto-generated catch block
+			 e.printStackTrace();
+		 }
+		 String pageTitle=driver.getTitle();
+		 System.out.println("this is the page title: "+pageTitle);
+		 return pageTitle;
 	 }
 }
