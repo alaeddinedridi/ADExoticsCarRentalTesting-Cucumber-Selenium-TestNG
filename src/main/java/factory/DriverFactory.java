@@ -25,6 +25,7 @@ public class DriverFactory {
 			chromeOptions.addArguments("disable-infobars");
 			chromeOptions.addArguments("--test-type");
 			chromeOptions.addArguments("--disable-extensions");
+			chromeOptions.addArguments("--no-sandbox");
 			WebDriverManager.chromedriver().setup();
 			TLDriver.set(new ChromeDriver(chromeOptions));
 		}else if (browser.equals("firefox")) {
