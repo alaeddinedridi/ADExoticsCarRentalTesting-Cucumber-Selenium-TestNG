@@ -1,6 +1,7 @@
 package stepDefinitions;
 
-import org.junit.Assert;
+
+import org.testng.Assert;
 
 import base.BaseTests;
 import factory.DriverFactory;

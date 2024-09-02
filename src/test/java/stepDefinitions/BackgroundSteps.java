@@ -1,6 +1,7 @@
 package stepDefinitions;
 
-import org.junit.Assert;
+
+import org.testng.Assert;
 
 import base.BaseTests;
 import factory.DriverFactory;
@@ -57,7 +58,7 @@ public class BackgroundSteps extends BaseTests{
 
 	@Then("user is navigated to cars collection")
 	public void user_is_navigated_to_cars_collection() {
-		Assert.assertTrue("Seems like you are not logged in",loginPage.isLoggedIn());
+		Assert.assertTrue(loginPage.isLoggedIn(),"Seems like you are not logged in");
 		System.out.println("user is navigator tooooooooooooooooooooooooooooooooooo");
 	}
 }

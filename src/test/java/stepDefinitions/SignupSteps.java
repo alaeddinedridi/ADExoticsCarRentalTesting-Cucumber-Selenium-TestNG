@@ -1,8 +1,9 @@
 package stepDefinitions;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Assert;
+import org.testng.Assert;
 
 import factory.DriverFactory;
 import io.cucumber.datatable.DataTable;

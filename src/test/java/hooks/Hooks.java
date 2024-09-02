@@ -1,5 +1,7 @@
 package hooks;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import java.util.Properties;
 
 import org.openqa.selenium.OutputType;
@@ -21,8 +23,7 @@ public class Hooks {
 	private ConfigReader configReader;
 	private Properties props;
 
-
-	@BeforeMethod
+	//@BeforeMethod
 	@Before(order=0)
 	public void getProperties() {
 		configReader = new ConfigReader();
@@ -30,7 +31,7 @@ public class Hooks {
 		System.out.println("initialize props");
 	}
 
-	@BeforeMethod
+	//@BeforeMethod
 	@Before(order=1)
 	public void launchBrowser() {
 		String browser=props.getProperty("browser");
@@ -40,14 +41,15 @@ public class Hooks {
 	}
 
 
-	@AfterMethod
+	//@AfterMethod
 	@After(order=0)
 	public void quitBrowser() {
 		System.out.println("inside quit");
 		driver.quit();
 	}
 
-	@AfterMethod
+	//@AfterMethod
+	@After
 	public void tearDown(Scenario scenario) {
 		System.out.println("inside teardown");
 		if (scenario.isFailed()) {

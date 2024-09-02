@@ -3,7 +3,7 @@ package stepDefinitions;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Assert;
+import org.testng.Assert;
 
 import base.BaseTests;
 import factory.DriverFactory;
@@ -26,7 +26,7 @@ public class PostCarSteps extends BaseTests{
 	@Given("admin is on post car page")
 	public void admin_is_on_post_car_page() {
 		postCarPage = adminDashboardPage.clickOnPostCar();
-		Assert.assertEquals("Post Car - ADExotics Car Rental", postCarPage.getTitle());
+		Assert.assertEquals(postCarPage.getTitle(),"Post Car - ADExotics Car Rental");
 	}
 	
 	@When("^admin enters car informations$")
@@ -69,7 +69,7 @@ public class PostCarSteps extends BaseTests{
 	
 	@And("post the car")
 	public void post_the_car() {
-		Assert.assertEquals("Car uploaded successfully!", postCarPage.uploadPictures());
+		Assert.assertEquals(postCarPage.uploadPictures(),"Car uploaded successfully!");
 	}
 
 	@And("checks if the car was uploaded with the selected thumbnail")
