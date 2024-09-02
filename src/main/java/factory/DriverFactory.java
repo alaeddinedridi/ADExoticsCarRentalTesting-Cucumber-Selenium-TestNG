@@ -26,6 +26,7 @@ public class DriverFactory {
 			chromeOptions.addArguments("--test-type");
 			chromeOptions.addArguments("--disable-extensions");
 			chromeOptions.addArguments("--no-sandbox");
+			chromeOptions.addArguments("--disable-dev-shm-usage");
 			WebDriverManager.chromedriver().setup();
 			TLDriver.set(new ChromeDriver(chromeOptions));
 		}else if (browser.equals("firefox")) {
