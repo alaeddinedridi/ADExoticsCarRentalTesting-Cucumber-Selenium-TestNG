@@ -23,7 +23,7 @@ public class Hooks {
 	private ConfigReader configReader;
 	private Properties props;
 
-	//@BeforeMethod
+	@BeforeMethod
 	@Before(order=0)
 	public void getProperties() {
 		configReader = new ConfigReader();
@@ -31,7 +31,7 @@ public class Hooks {
 		System.out.println("initialize props");
 	}
 
-	//@BeforeMethod
+	@BeforeMethod
 	@Before(order=1)
 	public void launchBrowser() {
 		String browser=props.getProperty("browser");
@@ -41,15 +41,14 @@ public class Hooks {
 	}
 
 
-	//@AfterMethod
+	@AfterMethod
 	@After(order=0)
 	public void quitBrowser() {
 		System.out.println("inside quit");
 		driver.quit();
 	}
 
-	//@AfterMethod
-	@After
+	@AfterMethod
 	public void tearDown(Scenario scenario) {
 		System.out.println("inside teardown");
 		if (scenario.isFailed()) {
