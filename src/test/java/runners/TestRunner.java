@@ -10,14 +10,14 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-	features="/src/test/resources/features",
+	features="src/test/resources/features",
 	glue= {"stepDefinitions","hooks","transformers"},
 	tags= "@SanityTest",
 	monochrome = true,
 	dryRun=false, // when it's set to true, it checks the mapping between feature file and step definition file without running the browser
 	plugin= {"pretty",
-					"junit:target/junitReports/report.xml",
-					"json:target/JSONReports/report.json",
+					"junit:target/junitReports/JunitReport.xml",
+					"json:target/JSONReports/JsonReport.json",
 					"html:target/HtmlReport.html",
 			}
 
