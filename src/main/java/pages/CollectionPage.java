@@ -13,4 +13,6 @@ public class CollectionPage extends BasePage{
 		this.driver=driver;
 		System.out.println("inside Collection page");
 	}
+    
+    
 }

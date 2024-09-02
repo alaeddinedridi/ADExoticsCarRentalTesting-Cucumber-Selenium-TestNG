@@ -21,7 +21,7 @@ Feature: Signup feature
 		|  |  |  | test1234 |
 	
 	
-	
+	@SanityTest
 	Scenario Outline: Signup with valid informations
   	Given user is on signup page
 		When user enters his signup informations "<fullName>" and "<email>" and "<password>" and "<confirmPassword>"

@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="29.997" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="post a car" name="Select a thumbnail for the car" time="29.446">
+<testsuite name="Cucumber" time="61.305" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="Login feature" name="Check login is successful with valid credentials - Example #1.1" time="21.048">
 <system-out><![CDATA[
+Given user is on home page..................................................passed
 Given user is on login page.................................................passed
 When user enters his "admin@gmail.com" and "admin"..........................passed
 And clicks on login.........................................................passed
-Then user is navigated to admin dashboard...................................passed
-Given admin is on post car page.............................................passed
-When admin enters car informations..........................................passed
-And clicks on next..........................................................passed
-And picks car pictures......................................................passed
-Then admin chooses a main picture for the car...............................passed
-And post the car............................................................passed
-And checks if the car was uploaded with the selected thumbnail..............passed
+Then user is navigated to cars collection...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login feature" name="Check login is successful with valid credentials - Example #1.2" time="18.244">
+<system-out><![CDATA[
+Given user is on home page..................................................passed
+Given user is on login page.................................................passed
+When user enters his "ala@gmail.com" and "test1234".........................passed
+And clicks on login.........................................................passed
+Then user is navigated to cars collection...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Signup feature" name="Signup with valid informations - Example #1.1" time="21.27">
+<system-out><![CDATA[
+Given user is on home page..................................................passed
+Given user is on signup page................................................passed
+When user enters his signup informations "Miela Dridi" and "miela.dridi@gmail.com" and "test@1234" and "test@1234".passed
+And clicks on signup........................................................passed
+Then user is navigated to login page........................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

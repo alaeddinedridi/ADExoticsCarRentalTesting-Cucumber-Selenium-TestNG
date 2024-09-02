@@ -56,4 +56,16 @@ public class BasePage {
 		System.out.println("these are the items of the list : "+select.getOptions());
 		select.selectByValue(option);
 	}
+	
+	protected String getTitle() {
+		 try {
+			 Thread.sleep(2000);
+		 } catch (InterruptedException e) {
+			 // TODO Auto-generated catch block
+			 e.printStackTrace();
+		 }
+		 String pageTitle=driver.getTitle();
+		 System.out.println("this is the page title: "+pageTitle);
+		 return pageTitle;
+	 }
 }

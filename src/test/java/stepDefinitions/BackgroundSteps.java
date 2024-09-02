@@ -31,6 +31,7 @@ public class BackgroundSteps extends BaseTests{
 		Assert.assertEquals("Login - ADExotics Car Rental", loginPage.getTitle());
 	}
 	
+	@Given("Admin is on dashboard page")
 	@Then("user is navigated to admin dashboard")
 	public void user_is_navigated_to_admin_dashboard() {
 		Assert.assertEquals("Admin Dashboard - ADExotics Car Rental", adminDashboardPage.getTitle());

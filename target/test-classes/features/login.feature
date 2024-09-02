@@ -47,7 +47,7 @@ Feature: Login feature
 	
 	
 	
-	
+	@SanityTest
 	Scenario Outline: Check login is successful with valid credentials
   	Given user is on login page
 		When user enters his "<email>" and "<password>"
