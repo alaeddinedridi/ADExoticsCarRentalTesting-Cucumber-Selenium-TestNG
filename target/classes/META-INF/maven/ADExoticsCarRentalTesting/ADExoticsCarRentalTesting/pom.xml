@@ -92,7 +92,7 @@
 			    <version>3.5.0</version>
 			    <configuration>
 			        <includes>
-						<include>**/TestRunner.java</include>
+						<include>src/test/java/runners/TestRunner.java</include>
 					</includes>
 			    </configuration>
 			</plugin>
