@@ -27,6 +27,7 @@ public class PostCarSteps extends BaseTests{
 	public void admin_is_on_post_car_page() {
 		postCarPage = adminDashboardPage.clickOnPostCar();
 		Assert.assertEquals(postCarPage.getTitle(),"Post Car - ADExotics Car Rental");
+		
 	}
 	
 	@When("^admin enters car informations$")
