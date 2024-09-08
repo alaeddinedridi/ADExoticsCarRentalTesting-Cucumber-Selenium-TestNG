@@ -34,7 +34,8 @@ Feature: Signup feature
 	| fullName | email | password | confirmPassword |
 	#| Aladdin Dridi  | aladdin.dridi@gmail.com | test1234 | test1234 |
 	#| Ahmed Dridi  | ahmed.dridi@gmail.com | test@1234 | test@1234 |
-	| Miela Dridi  | miela.dridi@gmail.com | test@1234 | test@1234 |
+	#| Miela Dridi  | miela.dridi@gmail.com | test@1234 | test@1234 |
+	| Jenkins Dridi  | jenkins.dridi@gmail.com | test@1234 | test@1234 |
 	
 	
 	Scenario Outline: Try to signup with existing user informations

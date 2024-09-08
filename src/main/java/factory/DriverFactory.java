@@ -20,7 +20,8 @@ public class DriverFactory {
 		System.out.println("browser value is: " + browser);
 		if (browser.equals("chrome")) {
 			ChromeOptions chromeOptions = new ChromeOptions();
-			//chromeOptions.addArguments("--headless");
+			// use headless to solve SessionNotCreatedException from jenkins
+			chromeOptions.addArguments("--headless");
 			chromeOptions.addArguments("--start-maximized");
 			chromeOptions.addArguments("--remote-allow-origins=*");
 			chromeOptions.addArguments("--ignore-certificate-errors");

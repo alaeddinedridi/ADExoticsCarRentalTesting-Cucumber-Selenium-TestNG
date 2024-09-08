@@ -61,6 +61,7 @@ Feature: Login feature
 	| email | password |
 	| admin@gmail.com | admin |
 	| ala@gmail.com | test1234 |
+	| jenkins.dridi@gmail.com | test1234 |
 	
 		
 		
