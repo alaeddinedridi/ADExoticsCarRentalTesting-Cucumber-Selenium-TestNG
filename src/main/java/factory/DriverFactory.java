@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -31,6 +32,8 @@ public class DriverFactory {
 			WebDriverManager.chromedriver().setup();
 			TLDriver.set(new ChromeDriver(chromeOptions));
 		}else if (browser.equals("firefox")) {
+			FirefoxOptions firefoxOptions= new FirefoxOptions();
+			firefoxOptions.addArguments("--headless");
 			WebDriverManager.firefoxdriver().setup();
 			TLDriver.set(new FirefoxDriver());
 		}else {
