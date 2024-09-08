@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 
 	features="src/test/resources/features",
 	glue= {"stepDefinitions","hooks","transformers"},
-	tags= "@SanityTest",
+	//tags= "@SanityTest",
 	monochrome = true,
 	dryRun=false, // when it's set to true, it checks the mapping between feature file and step definition file without running the browser
 	plugin= {"pretty",

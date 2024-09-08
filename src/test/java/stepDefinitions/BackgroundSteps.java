@@ -21,7 +21,7 @@ public class BackgroundSteps extends BaseTests{
 	
 	@Given("user is on home page")
 	public void user_is_on_home_page() {
-		DriverFactory.getDriver().navigate().to("http://localhost:4200/");
+		DriverFactory.getDriver().navigate().to("http://www.google.com/");
 		Assert.assertEquals("Home - ADExotics Car Rental", homePage.getTitle());
 	}
 
